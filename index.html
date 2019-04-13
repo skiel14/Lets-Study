@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Let's Study</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Let's Study">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/pulse/bootstrap.min.css" rel="stylesheet" integrity="sha384-/uQFqO50IaQu2rNJYKPpV7zwsWJtd6V4DGX4wMw1ATz4KPuZEV96qQ2heVAw2kr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Let's Study</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="chat.html">Chat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="jumbotron text-center">
+      <h1 class="display-3">Let's Study!</h1>
+      <p class="lead">Coordinating study group meetings just got easier.</p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Find a location:</h4>
+          <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+          <div id="map"></div>
+          <p><small>Tip: Try searching for a Panera Bread, a Starbucks, or a library!</small></p>
+          <br>
+        </div>
+        <div class="col-md-6">
+          <h4>Find a group and start planning: </h4>
+          <iframe src="https://discordapp.com/widget?id=566403147061526528&theme=light" width="540" height="450" allowtransparency="true" frameborder="0"></iframe>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div id="weatherApi">
+          <h4>What's the weather looking like?</h4>
+          <div id="city"></div>
+          <div id="wind"></div>
+          <div id="humidity"></div>
+          <div id="temp"></div>
+          <form>
+            <fieldset>
+              <div class="form-group">
+                <label for="search-city">Weather Search (city)</label>
+                <input type="text" class="form-control" id="search-city" placeholder="search">
+              </div>
+              <div class="text-center">
+                <button type="submit" id="submit-search" class="btn btn-primary btn-block">Submit</button>
+              </div>
+            </fieldset>
+            <br>
+            <br>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="javascript/script.js" defer></script>
+    <script src="javascript/map-API.js" defer></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCEhCXnxk6jqczkGUZOL-MUqVwnBsXq0E&libraries=places&callback=initMap">
+    </script>
+  </body>
+</html>
